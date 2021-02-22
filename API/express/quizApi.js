@@ -19,11 +19,24 @@ fetchQuestions = () => {
 }
 
 
-express.get("/question", (req, res) => {
-    // req.query
-    // req.params
-    res.send("Hello world");
-    fetchQuestions();
+express.get("/question", async (req, res, next) => {
+    try{
+        let results = await quizDb.allQuestions();
+        res.json(results);
+    }catch (e){
+        console.log(e);
+        res.sendStatus(500);
+    }
+});
+
+express.get("/question/:id", async (req, res, next) => {
+    try{
+        let results = await quizDb.quesById(req.params.id);
+        res.json(results);
+    }catch (e){
+        console.log(e);
+        res.sendStatus(500);
+    }
 })
 
 module.exports = express;

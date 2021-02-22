@@ -5,10 +5,12 @@
         "app_desc": "quiz-app-api dev",
         "node_port": 8090,
         "json_indentation": 4,
-        "database": "quizdb",
-        "host": "localhost",
-        "user": "root",
-        "password": "root"
+        "dbName": "quizdb",
+        "dbHost": "localhost",
+        "dbUser": "root",
+        "dbPassword": "root",
+        "connectionLimit": 10,
+        "dbPort": 3306
     },
     "testing": {
         "config_id": "testing",

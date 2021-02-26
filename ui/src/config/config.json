@@ -1,0 +1,8 @@
+{
+    "development": {
+        "config_id" : "dev",
+        "app_name" : "quiz-app-ui",
+        "app_desc" : "quiz-app-ui dev",
+        "api_url" : "http://localhost:8090/"
+    }
+}

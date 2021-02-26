@@ -1,6 +1,7 @@
 const Express = require('express');
 const loginUserDB = require('../dao/login');
 const loginHelper = require('../helperService/loginHelper');
+const cookieParser = require('cookie-parser')
 
 const express = Express.Router();
 
@@ -26,8 +27,10 @@ express.post("/validateUser", async (req, res, next) => {
             let password = loginHelper.generatePasswordHash(req.body.password);
             let results = await loginUserDB.validateUser(req.body.username, password);
             if(results.length > 0){
-                console.log(loginHelper.generateJWTToken(results));
-                res.json({"valid user": results});
+                let theJwtTokenValue = loginHelper.generateJWTToken(results);
+                // let cookie = 
+                // res.cookie('jwtToken', theJwtTokenValue, { maxAge: 900000, httpOnly: true });
+                res.json({"token": theJwtTokenValue});
             }else{
                 res.status(401).send({message: "Unauthorized user"});
             }

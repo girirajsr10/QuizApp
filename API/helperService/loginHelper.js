@@ -17,5 +17,6 @@ loginHelper.generateJWTToken = (userDetails) => {
     }
     let jwToken = nJwt.create(claims, secretKey);
     console.log(jwToken.compact());
+    return jwToken;
 }
 module.exports = loginHelper;

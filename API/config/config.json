@@ -10,7 +10,8 @@
         "dbUser": "root",
         "dbPassword": "root",
         "connectionLimit": 10,
-        "dbPort": 3306
+        "dbPort": 3306,
+        "uiUrl": "http://localhost:3000"
     },
     "testing": {
         "config_id": "testing",

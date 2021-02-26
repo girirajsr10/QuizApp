@@ -17,8 +17,8 @@ export class RegistrationComponent extends React.Component{
         this.setState({ [fieldName]: event.target.value });
     }
     registerUser = () =>{
-        // RegistrationService.registerUser(this.state, this.registerCallback);
-        this.registerCallback(true);
+        RegistrationService.registerUser(this.state, this.registerCallback);
+        // this.registerCallback(true);
     }
     registerCallback = (status) =>{
         if(!status){

@@ -1,0 +1,12 @@
+export const DASHBOARD_URL = "/dashboard";
+export const CREATE_QUIZ_URL = "/createQuiz";
+export const ATTEMPT_QUIZ_URL = "/attemptQuiz";
+export const QUIZ_HISTORY_URL = "/quizList";
+export const LOG_OUT_URL = "/logout";
+export const LOG_IN_URL = "/login";
+export const REGISTER_URL = "/register";
+export const QUIZ_ANALYTICS_URL = "/quizAnalytics";
+// export const LOG_OUT_URL = "/logout"
+// export const LOG_OUT_URL = "/logout"
+// export const LOG_OUT_URL = "/logout"
+// export const LOG_OUT_URL = "/logout"

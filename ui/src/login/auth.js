@@ -9,7 +9,7 @@ class Auth{
         // callback();
     }
     logout(callback){
-        sessionStorage.setItem('access_token', undefined);
+        sessionStorage.removeItem('access_token', undefined);
         callback();
     }
     isAuthenticated(){

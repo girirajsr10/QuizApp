@@ -15,8 +15,8 @@ loginHelper.generateJWTToken = (userDetails) => {
         iss: global.gConfig.app_name,
         permissions: userDetails.role
     }
-    let jwToken = nJwt.create(claims, secretKey);
-    console.log(jwToken.compact());
+    let jwToken = nJwt.create(claims, secretKey).compact();
+    console.log(jwToken);
     return jwToken;
 }
 module.exports = loginHelper;
